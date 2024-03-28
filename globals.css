@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+	font-family: 'Poppins';
+	src: local('Poppins'), url('./public/fonts/Poppins-Regular.ttf') format('ttf');
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	font-family: 'Poppins', sans-serif;
+}
+html {
+	scroll-behavior: smooth;
+}
+a {
+	transition: 0.5s;
+}
+ul a:hover {
+	padding-bottom: 10px;
+	animation: linkHover 2s infinite;
+	border-bottom: 0.5s;
+	transition: 0.5s;
+}
+@keyframes linkHover {
+	0% {
+		border-bottom: 0px solid black;
+	}
+	50% {
+		border-bottom: 2px solid black;
+	}
+	100% {
+		border-bottom: 0px solid black;
+	}
+}
+
+@layer base {
+	:root {
+		--primary: 240 5.9% 10%;
+
+		--secondary: 240 4.8% 95.9%;
+
+		--dark: 240 5.9% 10%;
+	}
+}
+
+.hero-animate {
+	animation: heroAnimate 8s infinite;
+	border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+	transition: all 1s ease-in-out;
+	border: 3px solid #2d2e32;
+}
+
+@keyframes heroAnimate {
+	0% {
+		border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+	}
+	50% {
+		border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+	}
+	100% {
+		border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+	}
+}
+.stack li {
+	transition: 0.5s;
+}
+.stack li:hover {
+	transform: translateY(-10px);
+	transition: 0.5s;
+}
+
+.white-btn {
+	padding: 5px 20px;
+	border-radius: 50px;
+	border: 1px solid white;
+	transition: 0.5s;
+}
+
+.white-btn:hover {
+	background: white;
+	color: black;
+	transition: 0.5s;
+}
+.input {
+	outline: none;
+	width: 340px;
+	height: 60px;
+	padding: 10px;
+	border-radius: 15px;
+}
